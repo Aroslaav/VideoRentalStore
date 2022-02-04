@@ -13,16 +13,12 @@ namespace VideoRentalStoreUI
 {
     public partial class MainForm : Form
     {
-        CInventory inventory = new CInventory();
-
+        CInventory inventory;
         public MainForm()
         {
             InitializeComponent();
-
-            inventory.AddFilm(new CNewReleaseFilm("Matrix 11"));
-            inventory.AddFilm(new CRegularFilm("Spider man 2"));
-            inventory.AddFilm(new CRegularFilm("Spider man 2"));
-            inventory.AddFilm(new COldFilm("Out of africa"));
+            inventory = CApp.GetApp.inventory;
+            
 
 
         }
@@ -54,7 +50,7 @@ namespace VideoRentalStoreUI
 
         private void btnAddFilm_Click(object sender, EventArgs e)
         {
-            using (NewFilmForm frm = new NewFilmForm(inventory))
+            using (NewFilmForm frm = new NewFilmForm())
             {
                 if (DialogResult.OK == frm.ShowDialog())
                 {
@@ -88,6 +84,15 @@ namespace VideoRentalStoreUI
                 dgvInventory.DataSource = inventory.CurrentDataset;
                 dgvInventory.Update();
                 //dgvInventory.Rows.RemoveAt(dgvInventory.Rows.Count-2);
+            }
+        }
+
+        private void btnCreateOrder_Click(object sender, EventArgs e)
+        {
+            using (NewOrderForm frm = new NewOrderForm())
+            {
+                frm.ShowDialog();
+                
             }
         }
     }

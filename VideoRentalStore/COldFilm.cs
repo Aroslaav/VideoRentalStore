@@ -4,9 +4,15 @@ using System.Text;
 
 namespace VideoRentalStore
 {
-    public class COldFilm:CFilm
+    public class COldFilm:CRegularFilm
     {
-        public COldFilm(string title) : base(FilmType.OldFilm, title, 1)
+        public COldFilm(string title) : base(title)
         { }
+
+        public override int GetRentDays()
+        {
+            return 5;
+        }
+        
     }
 }

@@ -11,11 +11,11 @@ namespace VideoRentalStoreUI
 {
     public partial class NewFilmForm : Form
     {
-        CInventory Inventory;
-        public NewFilmForm(CInventory inventory)
+
+        public NewFilmForm()
         {
             InitializeComponent();
-            Inventory = inventory;
+
             cmbFilmType.DataSource = Enum.GetValues(typeof(FilmType));
         }
 
@@ -30,22 +30,23 @@ namespace VideoRentalStoreUI
             FilmType filmType;
             Enum.TryParse<FilmType>(cmbFilmType.SelectedValue.ToString(), out filmType);
             CFilm newFilm = new CRegularFilm(txtName.Text);
+
             switch (filmType)
             {
                 case FilmType.NewRelease:
-                    newFilm = new CNewReleaseFilm(txtName.Text);
+                    newFilm = (CNewReleaseFilm)newFilm;
                     break;
                 case FilmType.OldFilm:
-                    newFilm = new COldFilm(txtName.Text);
+                    newFilm = (COldFilm)newFilm; 
                     break;
                 case FilmType.RegularFilm:
-                    newFilm = new CRegularFilm(txtName.Text);
+                    newFilm = (CRegularFilm)newFilm; 
                     break;
             }
             
             newFilm.Copies = (int)nudCopies.Value;
 
-            Inventory.AddFilm(newFilm);
+           CApp.GetApp.inventory.AddFilm(newFilm);
         }
     }
 }

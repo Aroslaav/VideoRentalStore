@@ -14,4 +14,19 @@
     <ProjectReference Include="..\VideoRentalStore\VideoRentalStore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="NewFilmForm - Copy - Copy.Designer.cs">
+      <DependentUpon>NewFilmForm - Copy.Designer.cs</DependentUpon>
+    </Compile>
+    <Compile Update="NewFilmForm - Copy.Designer.cs">
+      <DependentUpon>NewFilmForm.Designer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="NewFilmForm - Copy.resx">
+      <DependentUpon>NewFilmForm.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

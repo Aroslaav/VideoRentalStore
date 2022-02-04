@@ -17,20 +17,25 @@ namespace VideoRentalStore
 		OldFilm
 	}
 	public abstract class CFilm
-    {
-		
-		protected readonly int filmBonusPoint = 1;
+	{
+
+
+		protected int filmBonusPoint = 1;
 
 		PriceType priceType = PriceType.BASIC_PRICE;
-		protected  FilmType filmType = FilmType.RegularFilm;
+		public FilmType filmType = FilmType.RegularFilm;
 
 		[DisplayName("FilmType")]
-		public FilmType FilmTypeText { get { return filmType; }  }
+		public FilmType FilmTypeText { get { return filmType; } }
 		public string Title { get; set; }
 		public int Copies { get; set; }
 		public bool Available
 		{
 			get { return Copies > 0; }
+		}
+
+		public CFilm()
+		{
 		}
 
 		public CFilm(FilmType fType, string title, int fBonusPoint)
@@ -50,10 +55,10 @@ namespace VideoRentalStore
 					priceType = PriceType.BASIC_PRICE;
 					break;
 			}
-			
+
 		}
 
-		public CFilm(FilmType fType,int fBonusPoint) {
+		public CFilm(FilmType fType, int fBonusPoint) {
 			filmType = fType;
 			filmBonusPoint = fBonusPoint;
 		}
@@ -73,36 +78,52 @@ namespace VideoRentalStore
 			Copies--;
 		}
 
-		int FilmBonusPoint { 
+		int FilmBonusPoint {
 			get {
 				int iBpoint = 1;
-				switch(filmType)
+				switch (filmType)
 				{
 					case FilmType.NewRelease:
 						iBpoint = 2;
 						break;
 
 				}
-				return iBpoint; } 
+				return iBpoint; }
 		}
-
-		public decimal CalculateRentalPrice(bool useBunusPoints,int days)
+		public abstract int GetRentDays();
+		public virtual int GetBonusPointDay() 
 		{
-				decimal dPrice = 3;
-				switch (priceType)
-				{
-					case PriceType.PREMIUM_PRICE:
-						dPrice = 4;
-						break;
-
-				}
-
-
-				return dPrice;
+			return 5;
 		}
-		public int getFilmBonusPonts(int days)
+		public abstract decimal CalculateRentalPrice( int totalDays);
+		public int CalculateBonusPoints(int totalDays)
 		{
-			return filmBonusPoint * days;
+			return totalDays * GetBonusPointDay();
+		}
+		
+
+		public int GetExtraDays(int totalDays)
+		{
+			int extraDays = GetRentDays() - totalDays;
+			return (extraDays > 0 ? extraDays : 0) ;
+		}
+		//public decimal CalculateRentalPrice(bool useBunusPoints,int days)
+		//{
+		//		decimal dPrice = 3;
+		//		switch (priceType)
+		//		{
+		//			case PriceType.PREMIUM_PRICE:
+		//				dPrice = 4;
+		//				break;
+
+		//		}
+
+
+		//		return dPrice;
+		//}
+		public int getFilmBonusPonts()
+		{
+			return filmBonusPoint ;
 		}
 		public FilmType getFilmType()
 		{

@@ -4,13 +4,19 @@ using System.Text;
 
 namespace VideoRentalStore
 {
-    class CCustomer
+    public class CCustomer
     {
         public int FilmBonusPonts { get; set; }
-        public string name { get; set; }
-        public CCustomer()
+        public string Name { get; set; }
+        public CCustomer(string name)
         {
+            Name = name;
         }
-       
+
+        public override string ToString()
+        {
+            return  Name ;
+        }
+        
     }
 }

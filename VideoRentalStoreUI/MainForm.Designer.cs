@@ -36,11 +36,20 @@ namespace VideoRentalStoreUI
             this.btnRemoveFilm = new System.Windows.Forms.Button();
             this.btnAddFilm = new System.Windows.Forms.Button();
             this.dgvInventory = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabOrders = new System.Windows.Forms.TabPage();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
+            this.tabCustomers = new System.Windows.Forms.TabPage();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.btnCloseOrder = new System.Windows.Forms.Button();
+            this.btnCreateOrder = new System.Windows.Forms.Button();
             this.tabMain.SuspendLayout();
             this.tabInventoryPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            this.tabOrders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
+            this.tabCustomers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -48,7 +57,8 @@ namespace VideoRentalStoreUI
             this.tabMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabMain.Controls.Add(this.tabInventoryPage);
-            this.tabMain.Controls.Add(this.tabPage2);
+            this.tabMain.Controls.Add(this.tabOrders);
+            this.tabMain.Controls.Add(this.tabCustomers);
             this.tabMain.Location = new System.Drawing.Point(12, 12);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -125,15 +135,18 @@ namespace VideoRentalStoreUI
             this.dgvInventory.Size = new System.Drawing.Size(1298, 347);
             this.dgvInventory.TabIndex = 0;
             // 
-            // tabPage2
+            // tabOrders
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1310, 398);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabOrders.Controls.Add(this.btnCloseOrder);
+            this.tabOrders.Controls.Add(this.btnCreateOrder);
+            this.tabOrders.Controls.Add(this.dgvOrders);
+            this.tabOrders.Location = new System.Drawing.Point(4, 29);
+            this.tabOrders.Name = "tabOrders";
+            this.tabOrders.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOrders.Size = new System.Drawing.Size(1310, 398);
+            this.tabOrders.TabIndex = 1;
+            this.tabOrders.Text = "Orders";
+            this.tabOrders.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -144,6 +157,65 @@ namespace VideoRentalStoreUI
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // dgvOrders
+            // 
+            this.dgvOrders.AllowUserToAddRows = false;
+            this.dgvOrders.AllowUserToDeleteRows = false;
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(6, 45);
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.RowHeadersWidth = 51;
+            this.dgvOrders.RowTemplate.Height = 29;
+            this.dgvOrders.Size = new System.Drawing.Size(1298, 347);
+            this.dgvOrders.TabIndex = 1;
+            // 
+            // tabCustomers
+            // 
+            this.tabCustomers.Controls.Add(this.dgvCustomers);
+            this.tabCustomers.Location = new System.Drawing.Point(4, 29);
+            this.tabCustomers.Name = "tabCustomers";
+            this.tabCustomers.Size = new System.Drawing.Size(1310, 398);
+            this.tabCustomers.TabIndex = 2;
+            this.tabCustomers.Text = "Customers";
+            this.tabCustomers.UseVisualStyleBackColor = true;
+            // 
+            // dgvCustomers
+            // 
+            this.dgvCustomers.AllowUserToAddRows = false;
+            this.dgvCustomers.AllowUserToDeleteRows = false;
+            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Location = new System.Drawing.Point(7, 45);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.RowHeadersWidth = 51;
+            this.dgvCustomers.RowTemplate.Height = 29;
+            this.dgvCustomers.Size = new System.Drawing.Size(1298, 347);
+            this.dgvCustomers.TabIndex = 2;
+            // 
+            // btnCloseOrder
+            // 
+            this.btnCloseOrder.Location = new System.Drawing.Point(194, 10);
+            this.btnCloseOrder.Name = "btnCloseOrder";
+            this.btnCloseOrder.Size = new System.Drawing.Size(177, 29);
+            this.btnCloseOrder.TabIndex = 4;
+            this.btnCloseOrder.Text = "Close Order";
+            this.btnCloseOrder.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateOrder
+            // 
+            this.btnCreateOrder.Location = new System.Drawing.Point(6, 10);
+            this.btnCreateOrder.Name = "btnCreateOrder";
+            this.btnCreateOrder.Size = new System.Drawing.Size(177, 29);
+            this.btnCreateOrder.TabIndex = 3;
+            this.btnCreateOrder.Text = "Create Order";
+            this.btnCreateOrder.UseVisualStyleBackColor = true;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // MainForm
             // 
@@ -159,6 +231,10 @@ namespace VideoRentalStoreUI
             this.tabMain.ResumeLayout(false);
             this.tabInventoryPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            this.tabOrders.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
+            this.tabCustomers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,8 +248,13 @@ namespace VideoRentalStoreUI
         private System.Windows.Forms.Button btnRemoveFilm;
         private System.Windows.Forms.Button btnAddFilm;
         private System.Windows.Forms.DataGridView dgvInventory;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabOrders;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnCloseOrder;
+        private System.Windows.Forms.Button btnCreateOrder;
+        private System.Windows.Forms.DataGridView dgvOrders;
+        private System.Windows.Forms.TabPage tabCustomers;
+        private System.Windows.Forms.DataGridView dgvCustomers;
     }
 }
 
