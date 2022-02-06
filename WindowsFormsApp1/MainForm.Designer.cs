@@ -240,7 +240,6 @@ namespace VideoRentalStoreUI
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Video Rental Store";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabMain.ResumeLayout(false);
             this.tabInventoryPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();

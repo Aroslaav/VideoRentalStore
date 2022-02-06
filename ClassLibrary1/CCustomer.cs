@@ -18,18 +18,6 @@ namespace VideoRentalStore
         {
             Name = name;
         }
-        /// <summary>
-		/// Gets the bonus points from a customer.  
-		/// </summary>
-		/// <example>For example:
-		/// <code>
-		/// CCustomer customer new CCustomer("James") { BonusPonts=25}
-		/// int bonusPoints = customer.BonusPonts;
-		/// </code>
-		/// results in <c>bonusPoints</c>'s having the value 25.
-		/// </example>
-		/// <value>The bonus points from a customer.</value>
-        public int BonusPonts { get; set; }
 
         /// <summary>
         /// Gets the customer name.  
@@ -43,6 +31,20 @@ namespace VideoRentalStore
         /// </example>
         /// <value>The customer name.</value>
         public string Name { get; set; }
+
+
+        /// <summary>
+		/// Gets the bonus points from a customer.  
+		/// </summary>
+		/// <example>For example:
+		/// <code>
+		/// CCustomer customer new CCustomer("James") { BonusPonts=25}
+		/// int bonusPoints = customer.BonusPonts;
+		/// </code>
+		/// results in <c>bonusPoints</c>'s having the value 25.
+		/// </example>
+		/// <value>The bonus points from a customer.</value>
+        public int BonusPonts { get; set; }
 
         /// <summary>The customer name.</summary>
         /// <returns>The customer name</returns>

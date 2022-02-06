@@ -23,15 +23,14 @@ namespace VideoRentalStoreUI
         public CApp()
         {
             inventory.AddFilm(new CNewReleaseFilm() { Title = "Matrix 11",Copies = 1 }) ;
-            inventory.AddFilm(new CRegularFilm() { Title = "Spider man ", Copies = 1 });
-            inventory.AddFilm(new CRegularFilm() { Title = "Spider man 2" });
-            inventory.AddFilm(new COldFilm() { Title = "Out of africa" });
+            //inventory.AddFilm(new CRegularFilm() { Title = "Spider man ", Copies = 0 });
+            //inventory.AddFilm(new CRegularFilm() { Title = "Spider man 2" });
+            //inventory.AddFilm(new COldFilm() { Title = "Out of africa" , Copies = 1 });
             customers = new BindingList<CCustomer>() { new CCustomer("James") { BonusPonts=25}, new CCustomer("Robert"), new CCustomer("Mary") };
             orders = new BindingList<COrder>()
             {
-                new COrder(customers[0], inventory.ListAllFilmInStoreBL()) { StartDate=DateTime.Now.AddDays(-5),PlanningRentDays=4},
-                new COrder(customers[1], new BindingList<CFilm>(  ){ inventory.ListAllFilmInStoreBL().FirstOrDefault()}) { StartDate = DateTime.Now.AddDays(-2), PlanningRentDays = 3 }
-
+                new COrder(customers[0], inventory.ListAllFilmInStoreBL()) { StartDate=DateTime.Now.AddDays(-6),PlanningRentDays=4},
+                
             };
 
         }

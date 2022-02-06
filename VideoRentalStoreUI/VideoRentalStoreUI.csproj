@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VideoRentalStore\VideoRentalStore.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="NewFilmForm - Copy - Copy.Designer.cs">
       <DependentUpon>NewFilmForm - Copy.Designer.cs</DependentUpon>
     </Compile>

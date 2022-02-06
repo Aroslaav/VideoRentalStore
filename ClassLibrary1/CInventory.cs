@@ -13,7 +13,7 @@ namespace VideoRentalStore
     public class CInventory
     {
         /// <summary>Contains a list of <see cref="CFilm"/> "/>">.</summary>
-        List<CFilm> Films = new List<CFilm>();
+        BindingList<CFilm> Films = new BindingList<CFilm>();
         private BindingList<CFilm> currentDataset = new BindingList<CFilm>();
 
         /// <summary>
@@ -44,9 +44,10 @@ namespace VideoRentalStore
         /// </code>
         /// results in <c>film</c>'s having the class COldFilm.
         /// </example>
-        public void ChangeTypeOfFilm(CFilm film, FilmType type)
+        /// <returns>The film with changed type</returns>
+        public CFilm ChangeTypeOfFilm(CFilm film, FilmType type)
         {
-            int indexInList =  Films.FindIndex(f => f.Title == film.Title);
+            int indexInList = currentDataset.IndexOf(film);
             //CFilm newFilm;//new CRegularFilm(txtName.Text);
             switch (type)
             {
@@ -62,7 +63,9 @@ namespace VideoRentalStore
             }
 
             if (indexInList >= 0)
-                Films[indexInList] = film;
+                currentDataset[indexInList] = film;
+
+            return film;
         }
 
 
@@ -95,7 +98,7 @@ namespace VideoRentalStore
         /// </summary>
         public void ListAllFilm()
         {
-            currentDataset = new BindingList<CFilm>(Films);
+            currentDataset = new BindingList<CFilm>(Films.ToList<CFilm>());
             //return Films;
         }
 
