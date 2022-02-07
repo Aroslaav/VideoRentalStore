@@ -83,5 +83,10 @@ namespace VideoRentalStoreUI
                 MessageBox.Show(message);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

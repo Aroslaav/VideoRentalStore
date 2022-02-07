@@ -60,10 +60,11 @@ namespace VideoRentalStoreUI
             this.tabMain.Controls.Add(this.tabInventoryPage);
             this.tabMain.Controls.Add(this.tabOrders);
             this.tabMain.Controls.Add(this.tabCustomers);
-            this.tabMain.Location = new System.Drawing.Point(12, 12);
+            this.tabMain.Location = new System.Drawing.Point(12, 10);
+            this.tabMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(1318, 431);
+            this.tabMain.Size = new System.Drawing.Size(1318, 345);
             this.tabMain.TabIndex = 0;
             // 
             // tabInventoryPage
@@ -74,19 +75,21 @@ namespace VideoRentalStoreUI
             this.tabInventoryPage.Controls.Add(this.btnRemoveFilm);
             this.tabInventoryPage.Controls.Add(this.btnAddFilm);
             this.tabInventoryPage.Controls.Add(this.dgvInventory);
-            this.tabInventoryPage.Location = new System.Drawing.Point(4, 29);
+            this.tabInventoryPage.Location = new System.Drawing.Point(4, 25);
+            this.tabInventoryPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabInventoryPage.Name = "tabInventoryPage";
-            this.tabInventoryPage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInventoryPage.Size = new System.Drawing.Size(1310, 398);
+            this.tabInventoryPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabInventoryPage.Size = new System.Drawing.Size(1310, 316);
             this.tabInventoryPage.TabIndex = 0;
             this.tabInventoryPage.Text = "Inventory";
             this.tabInventoryPage.UseVisualStyleBackColor = true;
             // 
             // btnChangeTypeOfFilm
             // 
-            this.btnChangeTypeOfFilm.Location = new System.Drawing.Point(753, 10);
+            this.btnChangeTypeOfFilm.Location = new System.Drawing.Point(753, 8);
+            this.btnChangeTypeOfFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChangeTypeOfFilm.Name = "btnChangeTypeOfFilm";
-            this.btnChangeTypeOfFilm.Size = new System.Drawing.Size(177, 29);
+            this.btnChangeTypeOfFilm.Size = new System.Drawing.Size(177, 23);
             this.btnChangeTypeOfFilm.TabIndex = 5;
             this.btnChangeTypeOfFilm.Text = "Change Type of Film";
             this.btnChangeTypeOfFilm.UseVisualStyleBackColor = true;
@@ -94,9 +97,10 @@ namespace VideoRentalStoreUI
             // 
             // btnListAllFilmsInStore
             // 
-            this.btnListAllFilmsInStore.Location = new System.Drawing.Point(570, 10);
+            this.btnListAllFilmsInStore.Location = new System.Drawing.Point(570, 8);
+            this.btnListAllFilmsInStore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListAllFilmsInStore.Name = "btnListAllFilmsInStore";
-            this.btnListAllFilmsInStore.Size = new System.Drawing.Size(177, 29);
+            this.btnListAllFilmsInStore.Size = new System.Drawing.Size(177, 23);
             this.btnListAllFilmsInStore.TabIndex = 4;
             this.btnListAllFilmsInStore.Text = "List all films in store ";
             this.btnListAllFilmsInStore.UseVisualStyleBackColor = true;
@@ -104,9 +108,10 @@ namespace VideoRentalStoreUI
             // 
             // btnListAllFilms
             // 
-            this.btnListAllFilms.Location = new System.Drawing.Point(382, 10);
+            this.btnListAllFilms.Location = new System.Drawing.Point(382, 8);
+            this.btnListAllFilms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListAllFilms.Name = "btnListAllFilms";
-            this.btnListAllFilms.Size = new System.Drawing.Size(177, 29);
+            this.btnListAllFilms.Size = new System.Drawing.Size(177, 23);
             this.btnListAllFilms.TabIndex = 3;
             this.btnListAllFilms.Text = "List all films";
             this.btnListAllFilms.UseVisualStyleBackColor = true;
@@ -114,9 +119,10 @@ namespace VideoRentalStoreUI
             // 
             // btnRemoveFilm
             // 
-            this.btnRemoveFilm.Location = new System.Drawing.Point(194, 10);
+            this.btnRemoveFilm.Location = new System.Drawing.Point(194, 8);
+            this.btnRemoveFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFilm.Name = "btnRemoveFilm";
-            this.btnRemoveFilm.Size = new System.Drawing.Size(177, 29);
+            this.btnRemoveFilm.Size = new System.Drawing.Size(177, 23);
             this.btnRemoveFilm.TabIndex = 2;
             this.btnRemoveFilm.Text = "Remove Film";
             this.btnRemoveFilm.UseVisualStyleBackColor = true;
@@ -124,9 +130,10 @@ namespace VideoRentalStoreUI
             // 
             // btnAddFilm
             // 
-            this.btnAddFilm.Location = new System.Drawing.Point(6, 10);
+            this.btnAddFilm.Location = new System.Drawing.Point(6, 8);
+            this.btnAddFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddFilm.Name = "btnAddFilm";
-            this.btnAddFilm.Size = new System.Drawing.Size(177, 29);
+            this.btnAddFilm.Size = new System.Drawing.Size(177, 23);
             this.btnAddFilm.TabIndex = 1;
             this.btnAddFilm.Text = "Add Film";
             this.btnAddFilm.UseVisualStyleBackColor = true;
@@ -140,11 +147,12 @@ namespace VideoRentalStoreUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventory.Location = new System.Drawing.Point(6, 45);
+            this.dgvInventory.Location = new System.Drawing.Point(6, 36);
+            this.dgvInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowHeadersWidth = 51;
             this.dgvInventory.RowTemplate.Height = 29;
-            this.dgvInventory.Size = new System.Drawing.Size(1298, 347);
+            this.dgvInventory.Size = new System.Drawing.Size(1298, 278);
             this.dgvInventory.TabIndex = 0;
             // 
             // tabOrders
@@ -152,19 +160,21 @@ namespace VideoRentalStoreUI
             this.tabOrders.Controls.Add(this.btnCloseOrder);
             this.tabOrders.Controls.Add(this.btnCreateOrder);
             this.tabOrders.Controls.Add(this.dgvOrders);
-            this.tabOrders.Location = new System.Drawing.Point(4, 29);
+            this.tabOrders.Location = new System.Drawing.Point(4, 25);
+            this.tabOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabOrders.Name = "tabOrders";
-            this.tabOrders.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOrders.Size = new System.Drawing.Size(1310, 398);
+            this.tabOrders.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabOrders.Size = new System.Drawing.Size(1310, 316);
             this.tabOrders.TabIndex = 1;
             this.tabOrders.Text = "Orders";
             this.tabOrders.UseVisualStyleBackColor = true;
             // 
             // btnCloseOrder
             // 
-            this.btnCloseOrder.Location = new System.Drawing.Point(194, 10);
+            this.btnCloseOrder.Location = new System.Drawing.Point(194, 8);
+            this.btnCloseOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseOrder.Name = "btnCloseOrder";
-            this.btnCloseOrder.Size = new System.Drawing.Size(177, 29);
+            this.btnCloseOrder.Size = new System.Drawing.Size(177, 23);
             this.btnCloseOrder.TabIndex = 4;
             this.btnCloseOrder.Text = "Close Order";
             this.btnCloseOrder.UseVisualStyleBackColor = true;
@@ -172,9 +182,10 @@ namespace VideoRentalStoreUI
             // 
             // btnCreateOrder
             // 
-            this.btnCreateOrder.Location = new System.Drawing.Point(6, 10);
+            this.btnCreateOrder.Location = new System.Drawing.Point(6, 8);
+            this.btnCreateOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateOrder.Name = "btnCreateOrder";
-            this.btnCreateOrder.Size = new System.Drawing.Size(177, 29);
+            this.btnCreateOrder.Size = new System.Drawing.Size(177, 23);
             this.btnCreateOrder.TabIndex = 3;
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = true;
@@ -188,19 +199,21 @@ namespace VideoRentalStoreUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrders.Location = new System.Drawing.Point(6, 45);
+            this.dgvOrders.Location = new System.Drawing.Point(6, 36);
+            this.dgvOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvOrders.Name = "dgvOrders";
             this.dgvOrders.RowHeadersWidth = 51;
             this.dgvOrders.RowTemplate.Height = 29;
-            this.dgvOrders.Size = new System.Drawing.Size(1298, 347);
+            this.dgvOrders.Size = new System.Drawing.Size(1298, 278);
             this.dgvOrders.TabIndex = 1;
             // 
             // tabCustomers
             // 
             this.tabCustomers.Controls.Add(this.dgvCustomers);
-            this.tabCustomers.Location = new System.Drawing.Point(4, 29);
+            this.tabCustomers.Location = new System.Drawing.Point(4, 25);
+            this.tabCustomers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabCustomers.Name = "tabCustomers";
-            this.tabCustomers.Size = new System.Drawing.Size(1310, 398);
+            this.tabCustomers.Size = new System.Drawing.Size(1310, 316);
             this.tabCustomers.TabIndex = 2;
             this.tabCustomers.Text = "Customers";
             this.tabCustomers.UseVisualStyleBackColor = true;
@@ -213,30 +226,34 @@ namespace VideoRentalStoreUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(7, 45);
+            this.dgvCustomers.Location = new System.Drawing.Point(7, 36);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.RowHeadersWidth = 51;
             this.dgvCustomers.RowTemplate.Height = 29;
-            this.dgvCustomers.Size = new System.Drawing.Size(1298, 347);
+            this.dgvCustomers.Size = new System.Drawing.Size(1298, 278);
             this.dgvCustomers.TabIndex = 2;
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(1232, 463);
+            this.btnClose.Location = new System.Drawing.Point(1232, 370);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(94, 29);
+            this.btnClose.Size = new System.Drawing.Size(94, 23);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1342, 504);
+            this.ClientSize = new System.Drawing.Size(1342, 403);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabMain);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Video Rental Store";
