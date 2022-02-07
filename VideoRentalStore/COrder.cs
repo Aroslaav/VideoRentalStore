@@ -103,6 +103,7 @@ namespace VideoRentalStore
 
             foreach (var film in Films)
             {
+                film.Copies--;
                 filmRentalPrice = film.CalculateRentalPrice(PlanningRentDays);
 
                 filmBonusPoint = film.CalculateBonusPoints(PlanningRentDays);
@@ -125,7 +126,11 @@ namespace VideoRentalStore
             }
             filmPrint = string.Format("Total price : {0} EUR", Price);
             filmsPrint.AppendLine(filmPrint);
-
+            if (Customer.BonusPonts > 0)
+            {
+                filmPrint = string.Format("Remaining Bonus points: {0}", Customer.BonusPonts);
+                filmsPrint.AppendLine(filmPrint);
+            }
             return filmsPrint.ToString();
         }
 
@@ -143,21 +148,24 @@ namespace VideoRentalStore
             
             foreach (var film in Films)
             {
+                film.Copies++;
                 int OverloadedRentDays = TotalRentDays - PlanningRentDays;
                 OverloadedRentDays = (OverloadedRentDays > 0 ? OverloadedRentDays : 0);
                 if (OverloadedRentDays > 0)
                 {
-                    ExtraPrice = film.CalculateRentalPrice(OverloadedRentDays);
+                    ExtraPrice = film.CalculateRentalPriceExtraDays( OverloadedRentDays);
                     totalPrice += ExtraPrice;
                    
-                    filmPrint = string.Format("{0} {1} extra days {2} EUR", film.ToString(), PlanningRentDays, ExtraPrice);
+                    filmPrint = string.Format("{0} {1} extra days {2} EUR", film.ToString(), OverloadedRentDays, ExtraPrice);
                     filmsPrint.AppendLine(filmPrint);
                 }
                 
             }
+
             Price += totalPrice;
             filmPrint = string.Format("Total price : {0} EUR", totalPrice);
             filmsPrint.AppendLine(filmPrint);
+
             return filmsPrint.ToString();
         }
     }

@@ -173,6 +173,21 @@ namespace VideoRentalStore
         public abstract decimal CalculateRentalPrice(int totalDays);
 
         /// <summary>
+        /// This method method of calculating rental extra days price for a film.  
+        /// </summary>
+        /// <param><c>extraDays</c> is extra rental days.
+        /// </param>
+        /// <example>For example:
+        /// <code>
+        /// CNewReleaseFilm film = new CNewReleaseFilm();
+        /// int  price = film.CalculateRentalPriceExtraDays(2);
+        /// </code>
+        /// results in <c>price</c>'s having the value 8.
+        /// </example>
+        /// <returns>A rental price for a film</returns>
+        public abstract decimal CalculateRentalPriceExtraDays(int extraDays);
+
+        /// <summary>
         /// This method of calculating bonus points that user can pay for a film.  
         /// </summary>
         /// <param><c>totalDays</c> is total number of rental days.

@@ -16,7 +16,8 @@ namespace VideoRentalStoreUI
         {
             InitializeComponent();
             Film = film;
-            cmbNewType.DataSource = Enum.GetValues(typeof(FilmType)); ;
+
+            cmbNewType.DataSource = Enum.GetValues(typeof(FilmType)); 
         }
 
         private void btnOk_Click(object sender, EventArgs e)

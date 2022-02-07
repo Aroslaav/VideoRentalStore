@@ -56,8 +56,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\VideoRentalStore.csproj">
-      <Project>{49eecd4c-fa20-44ba-870e-fd6128c315ed}</Project>
+    <ProjectReference Include="..\VideoRentalStore\VideoRentalStore.csproj">
+      <Project>{4cd10562-2c46-4913-a2c6-89331effda20}</Project>
       <Name>VideoRentalStore</Name>
     </ProjectReference>
   </ItemGroup>

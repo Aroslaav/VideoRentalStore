@@ -1,7 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFrameworkVersion>net472</TargetFrameworkVersion>
-  </PropertyGroup>
-
-</Project>

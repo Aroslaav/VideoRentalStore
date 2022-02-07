@@ -25,9 +25,14 @@ namespace VideoRentalStore
         {
             decimal dPrice = CPrice.BASIC_PRICE;
             if (days > GetBasicPriceRentDays())
-                dPrice += CPrice.BASIC_PRICE * days- GetBasicPriceRentDays();
+                dPrice += CPrice.BASIC_PRICE * days - GetBasicPriceRentDays();
 
             return dPrice;
+        }
+
+        public override decimal CalculateRentalPriceExtraDays( int extraDays)
+        {
+            return (CPrice.PREMIUM_PRICE * extraDays);
         }
         #endregion
     }

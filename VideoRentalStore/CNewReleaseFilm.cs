@@ -28,5 +28,7 @@ namespace VideoRentalStore
         public override int BonusPoint { get { return 2; } }
         public override int GetBasicPriceRentDays() => 0;
         public override decimal CalculateRentalPrice(int days) => CPrice.PREMIUM_PRICE * days;
+
+        
     }
 }
