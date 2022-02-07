@@ -26,10 +26,15 @@ namespace VideoRentalStoreUI
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if(txtName.Text.Trim().Length==0)
+            {
+                MessageBox.Show("Please fill the name.");
+                return;
+            }    
             DialogResult = DialogResult.OK;
             FilmType filmType;
             Enum.TryParse<FilmType>(cmbFilmType.SelectedValue.ToString(), out filmType);
-            CFilm newFilm = null;//new CRegularFilm(txtName.Text);
+            CFilm newFilm = null;
 
             switch (filmType)
             {
